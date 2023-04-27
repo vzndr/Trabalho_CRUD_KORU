@@ -32,11 +32,6 @@ def generate_id():
     id = max(products.keys()) + 1
     return id
 
-#Página inicial
-@app.route('/', methods=['GET'])
-def home_page():
-    return 'Ok.'
-
 #Mostra todos os produtos
 @app.route('/products', methods=['GET'])
 def show_all_products():
