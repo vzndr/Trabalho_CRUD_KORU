@@ -67,13 +67,13 @@ def update_product_by_id(id:int):
         for chave, dinossauro in products.items():
             if chave == id:
                 products[id] = {
-                                            'id': id,
-                                            'nome': request.json["nome"],
-                                            'preco': request.json["preco"],
-                                            'peso': request.json["peso"],
-                                            'descricao': request.json["descricao"],
-                                            'fornecedor': request.json["fornecedor"]
-                                          }
+                                'id': id,
+                                'nome': request.json["nome"],
+                                'preco': request.json["preco"],
+                                'peso': request.json["peso"],
+                                'descricao': request.json["descricao"],
+                                'fornecedor': request.json["fornecedor"]
+                                }
                 return jsonify(products[id])
         return jsonify({'message': "O produto que você está tentando alterar não existe. Verifique o código e tente novamente."})
 
